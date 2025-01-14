@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, ${{ vars.TET2 }}!
+        run: echo Hello, ${{ vars.$(basename $(pwd) | tr 'a-z' 'A-Z' )_TEST }}!
 
       # Runs a single command using the runners shell
       - name: pwd
