@@ -40,4 +40,4 @@ jobs:
         run: |
           dirname="$(basename $(pwd) | tr 'a-z' 'A-Z')_TEST"
 
-          echo ${{ vars[$dirname] }}
+          echo ${{ vars[dirname] }}
