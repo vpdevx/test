@@ -39,4 +39,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           dir_name=$(basename $(pwd) | tr 'a-z' 'A-Z')
-          echo ${{ vars[$dir_name + '_TEST'] }}
+          echo ${{ vars[format('{0}_TEST', $dirname)] }}
