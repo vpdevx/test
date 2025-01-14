@@ -39,4 +39,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo "DIRNAME=$(basename $(pwd) | tr 'a-z' 'A-Z')" >> $GITHUB_ENV
+          echo ${{ env.DIRNAME }}
           echo ${{ vars[format('{0}_TEST', env.DIRNAME)] }}
